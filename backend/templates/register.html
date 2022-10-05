@@ -1,0 +1,16 @@
+{% extends 'navbar.html' %}
+{% load bootstrap5 %}
+{% block body %}
+
+<div class="container">
+    <center><h3>Register Here</h3></center>
+    <div class="d-flex justify-content-center">
+        
+        <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <center><input type="submit" class="btn btn-primary" value="submit"></center>
+        </form>
+    </div>
+</div>
+{% endblock %}
